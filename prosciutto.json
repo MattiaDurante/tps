@@ -1,0 +1,9 @@
+{
+    "nome": "prosciutto",
+    "tipologia": "carne",
+    "prezzo_vendita": 20,
+    "prezzo_acquisto": 5,
+    "guadagno": 15,
+    "quantita": 46,
+    "link_img": "https://www.carrefour.it/on/demandware.static/-/Sites-carrefour-master-catalog-IT/default/dwd83e890e/large/ProsciuttocottoCareuccioMottadabanco-2000827000000-1.jpg"
+}

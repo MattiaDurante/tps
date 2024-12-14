@@ -1,0 +1,10 @@
+{
+  "nome": "mela",
+  "tipologia": "frutta",
+  "prezzo_vendita": 3,
+  "prezzo_acquisto": 2,
+  "guadagno": 1,
+  "quantita": 46,
+  "link_img": "https://media-assets.lacucinaitaliana.it/photos/61fa5acca9db3736d06b9439/16:9/w_2560%2Cc_limit/Mela-Rossa-Cuneo-IGP-ricette-fuji.jpg",
+  "descrizione": "Mele rosse succose, perfette per uno spuntino sano e gustoso."
+}

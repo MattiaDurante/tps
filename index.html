@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettaglio Prodotto</title>
+    <style>
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        img {
+            max-width: 200px;
+            height: auto;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Dettaglio Prodotto</h2>
+    <div id="dettaglio"></div>
+</div>
+
+<script>
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+function CaricaDettaglio() {
+    const nomeProdotto = getQueryParam("nome");
+    if (!nomeProdotto) {
+        alert("Nessun prodotto specificato!");
+        return;
+    }
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", `${nomeProdotto}.json`, true); // Nome diretto del file JSON
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            const prodotto = JSON.parse(xhr.responseText);
+            const str = `
+                <img src="${prodotto.link_img}" alt="${prodotto.nome}">
+                <h3>${prodotto.nome}</h3>
+                <p><strong>Tipologia:</strong> ${prodotto.tipologia}</p>
+                <table>
+                    <tr><th>Prezzo Vendita</th><td>${prodotto.prezzo_vendita}</td></tr>
+                    <tr><th>Prezzo Acquisto</th><td>${prodotto.prezzo_acquisto}</td></tr>
+                    <tr><th>Guadagno</th><td>${prodotto.guadagno}</td></tr>
+                    <tr><th>Quantità</th><td>${prodotto.quantita}</td></tr>
+                </table>
+            `;
+
+            document.getElementById("dettaglio").innerHTML = str;
+        } else {
+            console.error('Errore:', xhr.responseText);
+            alert("Errore nel caricamento del file JSON del prodotto.");
+        }
+    };
+
+    xhr.send();
+}
+
+CaricaDettaglio();
+</script>
+</body>
+</html>

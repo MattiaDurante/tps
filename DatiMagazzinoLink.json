@@ -1,0 +1,54 @@
+{
+  "magazzino": [
+    {
+      "nome": "prosciutto",
+      "tipologia": "carne",
+      "prezzo": 20,
+      "prezzo_vendita": 20,
+      "prezzo_acquisto": 5,
+      "guadagno": 15,
+      "quantita": 46,
+      "link_img": "https://www.carrefour.it/on/demandware.static/-/Sites-carrefour-master-catalog-IT/default/dwd83e890e/large/ProsciuttocottoCareuccioMottadabanco-2000827000000-1.jpg"
+    },
+    {
+      "nome": "biscotti",
+      "tipologia": "snack",
+      "prezzo": 8,
+      "prezzo_vendita": 8,
+      "prezzo_acquisto": 2,
+      "guadagno": 6,
+      "quantita": 68,
+      "link_img": "https://www.cereal.it/wp-content/uploads/Biscotti-Gocce-Cioccolato-.png"
+    },
+    {
+      "nome": "besciamella",
+      "tipologia": "condimento",
+      "prezzo": 6,
+      "prezzo_vendita": 6,
+      "prezzo_acquisto": 3,
+      "guadagno": 3,
+      "quantita": 68,
+      "link_img": "https://www.parmalat.it/origin0/app/uploads/2023/12/19142232/BES_CHEF_200_-CLASS.png"
+    },
+    {
+      "nome": "mela",
+      "tipologia": "frutta",
+      "prezzo": 3,
+      "prezzo_vendita": 3,
+      "prezzo_acquisto": 2,
+      "guadagno": 1,
+      "quantita": 46,
+      "link_img": "https://media-assets.lacucinaitaliana.it/photos/61fa5acca9db3736d06b9439/16:9/w_2560%2Cc_limit/Mela-Rossa-Cuneo-IGP-ricette-fuji.jpg"
+    },
+    {
+      "nome": "mela gialla",
+      "tipologia": "frutta",
+      "prezzo": 2,
+      "prezzo_vendita": 2,
+      "prezzo_acquisto": 1,
+      "guadagno": 1,
+      "quantita": 46,
+      "link_img": "https://www.cicalia.com/it/img/imgproducts/50772/l_50772.jpg"
+    }
+  ]
+}
