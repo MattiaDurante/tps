@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodotti Supermercato</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<h2>Prodotti Supermercato</h2>
+<table id="t1"></table>
+
+<script>
+function LetturaFile() {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "DatiMagazzinoLink.json", true);
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            const oggetto = JSON.parse(xhr.responseText);
+            let str = "<tr><th>Nome</th><th>Prezzo Vendita</th><th>Quantità</th><th>Dettagli</th></tr>";
+
+            oggetto.magazzino.forEach(prodotto => {
+                const nomeProdotto = prodotto.nome; // Nome senza codifica
+                str += `<tr>
+                    <td>${nomeProdotto}</td>
+                    <td>${prodotto.prezzo_vendita}</td>
+                    <td>${prodotto.quantita}</td>
+                    <td><a href="index.html?nome=${nomeProdotto}">Vedi Dettagli</a></td>
+                </tr>`;
+            });
+
+            document.getElementById("t1").innerHTML = str;
+        } else {
+            console.error('Errore:', xhr.responseText);
+            alert("Errore nel caricamento del file JSON.");
+        }
+    };
+
+    xhr.send();
+}
+
+LetturaFile();
+</script>
+</body>
+</html>
