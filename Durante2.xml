@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xml_css.xsl" ?>
+<scuola>
+	<classe>
+		<utente>
+			<nome> Arnold </nome>
+			<cognome> Schwarzenegger </cognome>
+			<indirizzo> Via vai 2</indirizzo>
+			<citta> Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch </citta>
+			<codicefiscale> SCHRLD80A01H264Y </codicefiscale>
+			<email> sonoarnoldilvero@gmail.com</email>
+			<telefono> 5469781324 </telefono>
+		</utente>
+	</classe>
+	<classe>
+		<utente>
+			<nome> Giosuè </nome>
+			<cognome> Carducci </cognome>
+			<indirizzo> Via scritto 45</indirizzo>
+			<citta> Genova </citta>
+			<codicefiscale> CRDGSI80A01H264Y </codicefiscale>
+			<email> hopiantoantico@itiscannizzaro.edu.it</email>
+			<telefono> 1475398621 </telefono>
+		</utente>
+	</classe>
+	<classe>
+		<utente>
+			<nome> Giovanna </nome>
+			<cognome> Arceri </cognome>
+			<indirizzo> Via archi 978 </indirizzo>
+			<citta> Jañaözen </citta>
+			<codicefiscale> ASDFGH78S74D145T </codicefiscale>
+			<email> tilanciounafreccia@hotmail.comn</email>
+			<telefono> 1254581245 </telefono>
+		</utente>
+	</classe>
+</scuola> 
