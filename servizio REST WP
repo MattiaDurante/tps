@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post da WordPress</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        h1 { color: #0073aa; }
+        #postList { list-style: none; padding: 0; }
+        li { margin: 10px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        a { text-decoration: none; color: #0073aa; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Ultimi Post da WordPress</h1>
+    <ul id="postList">Caricamento...</ul>
+
+    <script>
+        // URL di un sito WordPress con REST API attiva
+        const apiUrl = "https://techcrunch.com/wp-json/wp/v2/posts";
+
+        // Funzione per ottenere i post e mostrarli
+        async function getPosts() {
+            try {
+                let response = await fetch(apiUrl);
+                let posts = await response.json();
+
+                let postList = document.getElementById("postList");
+                postList.innerHTML = ""; // Svuota il caricamento iniziale
+
+                posts.forEach(post => {
+                    let li = document.createElement("li");
+                    li.innerHTML = `<a href="${post.link}" target="_blank">${post.title.rendered}</a>`;
+                    postList.appendChild(li);
+                });
+
+            } catch (error) {
+                console.error("Errore nel recupero dei post:", error);
+                document.getElementById("postList").innerHTML = "Errore nel caricamento.";
+            }
+        }
+
+        // Chiama la funzione quando la pagina si carica
+        getPosts();
+    </script>
+
+</body>
+</html>
